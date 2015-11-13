@@ -77,6 +77,7 @@ public class Hero : MonoBehaviour
 		//Keep the ship constrained to the screen bounds
 		Vector3 off = Utils.ScreenBoundsCheck (bounds, BoundsTest.onScreen);
 
+
 		if (off != Vector3.zero) {
 			pos -= off;
 			transform.position = pos;

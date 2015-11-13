@@ -187,6 +187,11 @@ public class Utils : MonoBehaviour
 		case BoundsTest.onScreen:
 
 			if (bigB.Contains (lilB.min) && bigB.Contains (lilB.max)) {
+				Debug.Log(bigB);
+				Debug.Log (bigB.min);
+				Debug.Log (bigB.max);
+				Debug.Log(lilB.min);
+				Debug.Log(lilB.max);
 				return(Vector3.zero);
 
 			}
@@ -194,12 +199,13 @@ public class Utils : MonoBehaviour
 			if (lilB.max.x > bigB.max.x) {
 				off.x = lilB.max.x - bigB.max.x;
 
+
 			} else if (lilB.min.x < bigB.min.x) {
 				off.x = lilB.min.x - bigB.min.x;
 			}
 
 			
-			if (lilB.max.x > bigB.max.y) {
+			if (lilB.max.y > bigB.max.y) {
 				off.y = lilB.max.y - bigB.max.y;
 				
 			} else if (lilB.min.y < bigB.min.y) {
@@ -207,7 +213,7 @@ public class Utils : MonoBehaviour
 			}
 
 			
-			if (lilB.max.x > bigB.max.z) {
+			if (lilB.max.z > bigB.max.z) {
 				off.z = lilB.max.z - bigB.max.z;
 				
 			} else if (lilB.min.z < bigB.min.z) {
